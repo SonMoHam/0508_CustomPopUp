@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         
         customPopUpVC.moveSiteBtnCompletionClosure = {
             print("moveSiteBtnCompletionClosure / 컴플레션 블럭 호출됨")
-            let myBlogUrl = URL(string: "")
+            let myBlogUrl = URL(string: "https://sonmo.tistory.com/?page=1")
             self.myWebView.load(URLRequest(url: myBlogUrl!))
         }
         
