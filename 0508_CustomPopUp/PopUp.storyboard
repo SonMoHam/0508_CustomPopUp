@@ -55,7 +55,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                        <state key="normal" title="사이트로 이동!"/>
+                                        <state key="normal" title="블로그로 이동!"/>
                                         <connections>
                                             <action selector="onMoveSiteBtnClicked:" destination="zZs-YS-yfG" eventType="touchUpInside" id="MsS-P6-sGH"/>
                                         </connections>
