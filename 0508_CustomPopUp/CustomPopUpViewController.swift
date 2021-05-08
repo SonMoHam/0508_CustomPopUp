@@ -14,6 +14,7 @@ class CustomPopUpViewController : UIViewController {
     @IBOutlet weak var moveSiteBtn: UIButton!
     @IBOutlet weak var bgBtn: UIButton!
     
+    var moveSiteBtnCompletionClosure: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,6 @@ class CustomPopUpViewController : UIViewController {
     
     @IBAction func onMoveSiteBtnClicked(_ sender: UIButton) {
         print("CustomPopUpViewController - onMoveSiteBtnClicked() called")
-        
     }
+    
 }
