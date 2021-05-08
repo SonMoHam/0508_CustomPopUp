@@ -34,6 +34,14 @@ class CustomPopUpViewController : UIViewController {
     
     @IBAction func onMoveSiteBtnClicked(_ sender: UIButton) {
         print("CustomPopUpViewController - onMoveSiteBtnClicked() called")
+        
+        self.dismiss(animated: true, completion: nil
+        )
+        // 컴플레션 블럭 호출
+        if let moveSiteBtnCompletionClosure = moveSiteBtnCompletionClosure {
+            // 메인에 알림
+            moveSiteBtnCompletionClosure()
+        }
     }
     
 }

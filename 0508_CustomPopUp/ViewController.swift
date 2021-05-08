@@ -25,15 +25,21 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard.init(name: "PopUp", bundle: nil)
         
         // 스토리보드 통해 뷰컨트롤러 가져옴
-        let alertPopUpVC = storyboard.instantiateViewController(withIdentifier: "AlertPopUpVC")
+        let customPopUpVC = storyboard.instantiateViewController(withIdentifier: "AlertPopUpVC") as! CustomPopUpViewController
         
         // 뷰 컨트롤러 보여지는 스타일
-        alertPopUpVC.modalPresentationStyle = .overCurrentContext
+        customPopUpVC.modalPresentationStyle = .overCurrentContext
         
         // 뷰 컨트롤러 사라지는 스타일
-        alertPopUpVC.modalTransitionStyle = .crossDissolve
+        customPopUpVC.modalTransitionStyle = .crossDissolve
         
-        self.present(alertPopUpVC, animated: true, completion: nil)
+        customPopUpVC.moveSiteBtnCompletionClosure = {
+            print("moveSiteBtnCompletionClosure / 컴플레션 블럭 호출됨")
+            let myBlogUrl = URL(string: "")
+            self.myWebView.load(URLRequest(url: myBlogUrl!))
+        }
+        
+        self.present(customPopUpVC, animated: true, completion: nil)
     }
     
 }
