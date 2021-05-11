@@ -16,6 +16,7 @@ class CustomPopUpViewController : UIViewController {
     @IBOutlet weak var moveSiteBtn: UIButton!
     @IBOutlet weak var bgBtn: UIButton!
     @IBOutlet weak var moveGitHubBtn: UIButton!
+    @IBOutlet weak var moveNBlogBtn: UIButton!
     
     var moveSiteBtnCompletionClosure: (() -> Void)?
     
@@ -29,16 +30,20 @@ class CustomPopUpViewController : UIViewController {
         contentView.layer.cornerRadius = 30
         moveSiteBtn.layer.cornerRadius = 10
         moveGitHubBtn.layer.cornerRadius = 10
+        moveNBlogBtn.layer.cornerRadius = 10
     }
     
     
     //MARK: - IBActions
-    @IBAction func onBgBtnClicked(_ sender: UIButton) {
-        print("CustomPopUpViewController - onBgBtnClicked() called")
-        
+    
+    // 이벤트 전달 - 노티피케이션 방식
+    @IBAction func onMoveNBlogBtnClicked(_ sender: UIButton) {
+        print("CustomPopUpViewController - onMoveNBlogBtnClicked() called")
+        NotificationCenter.default.post(name: Notification.Name(rawValue: notificationName), object: nil)
         self.dismiss(animated: true, completion: nil)
     }
-    
+ 
+    // 이벤트 전달 - 컴플레션 블럭 방식
     @IBAction func onMoveSiteBtnClicked(_ sender: UIButton) {
         print("CustomPopUpViewController - onMoveSiteBtnClicked() called")
         
@@ -50,6 +55,7 @@ class CustomPopUpViewController : UIViewController {
         }
     }
     
+    // 이벤트 전달 - 프로토콜 델리게잇 방식
     @IBAction func onMoveGitHubBtnClicked(_ sender: UIButton) {
         print("CustomPopUpViewController - onMoveGitHubBtnClicked() called")
         
@@ -57,7 +63,11 @@ class CustomPopUpViewController : UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+    @IBAction func onBgBtnClicked(_ sender: UIButton) {
+        print("CustomPopUpViewController - onBgBtnClicked() called")
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 
     
 }

@@ -47,28 +47,38 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4aq-OE-Ysr">
-                                        <rect key="frame" x="65" y="277" width="120" height="70"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4aq-OE-Ysr">
+                                        <rect key="frame" x="65" y="263" width="120" height="110"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PP7-fw-U3i">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWj-Ub-e3r">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="네이버 블로그 이동"/>
+                                                <connections>
+                                                    <action selector="onMoveNBlogBtnClicked:" destination="zZs-YS-yfG" eventType="touchUpInside" id="usc-AG-R89"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PP7-fw-U3i">
+                                                <rect key="frame" x="0.0" y="40" width="120" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="120" id="AJj-0r-nmA"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                                <state key="normal" title="블로그로 이동!"/>
+                                                <state key="normal" title="T 블로그로 이동"/>
                                                 <connections>
                                                     <action selector="onMoveSiteBtnClicked:" destination="zZs-YS-yfG" eventType="touchUpInside" id="MsS-P6-sGH"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e1-ZD-AAh">
-                                                <rect key="frame" x="0.0" y="40" width="120" height="30"/>
+                                                <rect key="frame" x="0.0" y="80" width="120" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="GitHub으로 이동"/>
+                                                <state key="normal" title="GitHub 로 이동"/>
                                                 <connections>
                                                     <action selector="onMoveGitHubBtnClicked:" destination="zZs-YS-yfG" eventType="touchUpInside" id="UV2-bz-ztE"/>
                                                 </connections>
@@ -109,6 +119,7 @@
                         <outlet property="bgBtn" destination="2za-Qr-b5t" id="MAY-Nu-PJR"/>
                         <outlet property="contentView" destination="IyG-mC-T57" id="OO1-r9-l4D"/>
                         <outlet property="moveGitHubBtn" destination="4e1-ZD-AAh" id="knH-mV-Klc"/>
+                        <outlet property="moveNBlogBtn" destination="MWj-Ub-e3r" id="Rzm-ft-qmo"/>
                         <outlet property="moveSiteBtn" destination="PP7-fw-U3i" id="TKY-4T-260"/>
                     </connections>
                 </viewController>
@@ -121,6 +132,9 @@
         <image name="my_image" width="242" height="180"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

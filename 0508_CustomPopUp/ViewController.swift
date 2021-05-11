@@ -8,16 +8,35 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, PopUpDelegate {
+let notificationName = "btnClickNotification"
 
+class ViewController: UIViewController, PopUpDelegate {
+    
     @IBOutlet weak var myWebView: WKWebView!
     @IBOutlet weak var createPopUpBtn: UIButton!
+    
+    // 노티피케이션 해제
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // 노티피케이션 등록
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(loadWebView),
+                                               name: NSNotification.Name(rawValue: notificationName),
+                                               object: nil)
     }
-
+    
+    @objc fileprivate func loadWebView() {
+        print("viewController - loadWebView() called")
+        let myNBlogUrl = URL(string: "https://blog.naver.com/stay_dcer")
+        self.myWebView.load(URLRequest(url: myNBlogUrl!))
+    }
+    
     @IBAction func onCreatePopUpBtnClicked(_ sender: UIButton) {
         print("viewController - onCreatePopUpBtnClicked() called")
         
