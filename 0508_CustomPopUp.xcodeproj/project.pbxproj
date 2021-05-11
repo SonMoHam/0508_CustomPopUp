@@ -16,6 +16,7 @@
 		1264F516264656EB00709A69 /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1264F515264656EB00709A69 /* PopUp.storyboard */; };
 		1264F51926465AE900709A69 /* CustomPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1264F51826465AE900709A69 /* CustomPopUpViewController.swift */; };
 		1264F51D26465DD200709A69 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1264F51C26465DD200709A69 /* WebKit.framework */; };
+		128BC3F6264A56C600A5437F /* PopUpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128BC3F5264A56C600A5437F /* PopUpDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1264F515264656EB00709A69 /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
 		1264F51826465AE900709A69 /* CustomPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpViewController.swift; sourceTree = "<group>"; };
 		1264F51C26465DD200709A69 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		128BC3F5264A56C600A5437F /* PopUpDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				1264F50E264655C600709A69 /* Info.plist */,
 				1264F515264656EB00709A69 /* PopUp.storyboard */,
 				1264F51826465AE900709A69 /* CustomPopUpViewController.swift */,
+				128BC3F5264A56C600A5437F /* PopUpDelegate.swift */,
 			);
 			path = 0508_CustomPopUp;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				128BC3F6264A56C600A5437F /* PopUpDelegate.swift in Sources */,
 				1264F51926465AE900709A69 /* CustomPopUpViewController.swift in Sources */,
 				1264F505264655C500709A69 /* ViewController.swift in Sources */,
 				1264F501264655C500709A69 /* AppDelegate.swift in Sources */,

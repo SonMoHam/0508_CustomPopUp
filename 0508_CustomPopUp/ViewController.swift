@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PopUpDelegate {
 
     @IBOutlet weak var myWebView: WKWebView!
     @IBOutlet weak var createPopUpBtn: UIButton!
@@ -39,7 +39,17 @@ class ViewController: UIViewController {
             self.myWebView.load(URLRequest(url: myBlogUrl!))
         }
         
+        
+        customPopUpVC.myPopUpDelegate = self
+        
         self.present(customPopUpVC, animated: true, completion: nil)
+    }
+    
+    //MARK: - PopUpDelegate methods
+    func onMoveGitHubBtnClicked() {
+        print("viewController - onMoveGitHubBtnClicked() called")
+        let myGitHubUrl = URL(string: "https://github.com/SonMoHam")
+        self.myWebView.load(URLRequest(url: myGitHubUrl!))
     }
     
 }
