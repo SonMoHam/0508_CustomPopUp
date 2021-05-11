@@ -35,7 +35,6 @@ class CustomPopUpViewController : UIViewController {
     @IBAction func onBgBtnClicked(_ sender: UIButton) {
         print("CustomPopUpViewController - onBgBtnClicked() called")
         
-        //
         self.dismiss(animated: true, completion: nil)
     }
     
